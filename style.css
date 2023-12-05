@@ -1,0 +1,335 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+
+}
+*::selection{
+color: #fff;
+background-color: black;
+}
+
+html, body{
+    height: 100%;
+    width: 100%;
+
+}
+body{
+    background-color: #F7F7F7;
+
+}
+#links{
+    padding: 10px;
+}
+#nav #nav1 svg{
+    display: block;
+    
+}
+
+#nav #nav1{
+    /* background-color: red; */
+    height: 85px;
+    overflow: hidden;
+}
+#nav{
+    /* height: 100px; */
+    width: 100%;
+    /* background-color: burlywood; */
+    position: fixed;
+    z-index: 99;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 25px;
+
+}
+#nav #nav2{
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    gap: 50px;
+}
+#nav2 #links a{
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #333;
+    font-weight: 400;
+    font-size: 14px;
+    margin-right:  25px;
+}
+#icons{
+    padding: 10px;
+    border-radius: 50px;
+    background-color: #fff;
+}
+#nav2 #icons i{
+    font-weight: 100;
+    font-size: 18px;
+    margin: 0 20px;
+}
+#cursor{
+     height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    background-color: blanchedalmond;
+    position: fixed;
+    /* for cursor fix to original cursor */
+    transform: translate(-50%, -50%) scale(0) ;
+
+}
+
+/* % chije parent ke according leta hai */
+#page1{
+    min-height: 100vh;
+position: relative;
+    width: 100%;
+    padding: 0 1vw;
+    padding-top: 20vh;
+    /* background-color: salmon; */
+}
+#page1 h1{
+    font-size: 15vw;
+    text-transform: uppercase;
+    /* font-family: serif; */
+    /* line ke beech ki height */
+    line-height: 23vh;
+    letter-spacing: -8px;
+}
+#video-container{
+    height: 100vh;
+    width: 100%;
+    /* background-color: green; */
+    margin-top:1vw ;
+    position: relative;
+}
+
+#video-container video{
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+
+
+}
+#video-container #play{
+    padding: 4vw;
+    background-color: black;
+    color: #fff;
+    font-size: 1.3vw;
+    text-transform: uppercase;
+    /* font-family: serif; */
+position: fixed;
+border-radius: 50%;
+/* extra */
+padding: 3vw 2.2vw;
+opacity: 0;
+scale: 0;
+}
+
+#page2{
+    min-height: 100vh;
+    width: 100%;
+position: relative;
+display: flex;
+align-items: center;
+justify-content: space-between;
+padding: 3vw 1vw;
+}
+#page2 .elem{
+    height: 100%;
+    width: 31%;
+    /* background-color: aqua; */
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#page2 .elem img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    scale: 1;
+}
+#page2 .elem .dets{
+    height: 60px;
+    border-radius: 50px;
+    width: 80%;
+    position: absolute;
+    z-index: 9;
+    
+    background-color:#E5F0D6 ;
+}
+/* #page2 .elem .dets:hover{
+    height: 200px;
+} */
+
+#page3{
+   min-height: 120vh;
+    width: 100%;
+    background-color: #F7F7F7;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+.child{
+    height: 55vh;
+    width: 39vw;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.child img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+/* 600px se kam hoga to red bg rhega */
+@media (max-width:600px){
+    #page1 h1{
+        font-size: 15vw;
+        /* line ke beech ki height */
+        line-height: 6vh;
+        letter-spacing: -5px;
+    }
+
+    #page1{
+        min-height: 70vh;
+        width: 100%;
+        padding: 0 3vw;
+        padding-top: 25vh;
+    }
+    #video-container{
+        height: 25vh;
+        margin-top:3vw ;
+    }
+    #video-container #play{
+        padding: 7.5vw 5.2vw;
+        font-size: 4vw;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    font-weight: 1000;
+    opacity: 1;
+    scale: 1;
+    transform: translate(-50%, -50%)
+    }
+
+    #page2{
+        min-height: 100vh;
+        width: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5vw 3vw;
+flex-direction: column;    
+}
+
+#page2 .elem{
+    height: 100vh;
+    width: 100%;
+    /* background-color: aqua; */
+    overflow: hidden;
+margin-bottom: 5vw;
+}
+
+#page2 .elem img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    scale: 1;
+}
+#page2 .elem .dets{
+    height:40px;
+    border-radius: 50px;
+    width: 80%;
+    position: absolute;
+    z-index: 9;
+    
+    background-color:#E5F0D6 ;
+}
+
+
+#page3{
+    min-height: 120vh;
+     width: 100%;
+     background-color: #F7F7F7;
+     position: relative;
+     display: flex;
+     align-items: center;
+     justify-content: space-evenly;
+     flex-wrap: wrap;
+ }
+ .child{
+     height: 55vh;
+     width: 88vw;
+     position: relative;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     padding: 10px;
+ }
+ .child img{
+     height: 100%;
+     width: 100%;
+     object-fit: cover;
+ 
+ 
+    }
+
+
+    
+#nav #nav1 svg{
+    display: block;
+    
+}
+
+#nav #nav1{
+    /* background-color: red; */
+    height: 95px;
+    overflow: hidden;
+}
+#nav{
+    /* height: 100px; */
+    width: 100%;
+    /* background-color: burlywood; */
+    position: fixed;
+    z-index: 99;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 15px;
+
+}
+#nav #nav2{
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    gap: 50px;
+}
+#nav2 #links a{
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #333;
+    font-weight: 400;
+    font-size: 14px;
+    margin-right:  25px;
+}
+#icons{
+    padding: 10px;
+    border-radius: 50px;
+    background-color: #fff;
+}
+#nav2 #icons i{
+    font-weight: 100;
+    font-size: 18px;
+    margin: 0 20px;
+}
+#links{
+    display: none;
+}
+}
